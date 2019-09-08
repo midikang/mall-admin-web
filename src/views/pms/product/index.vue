@@ -68,7 +68,7 @@
     </el-card>
     <el-card class="operate-container" shadow="never">
       <i class="el-icon-tickets"></i>
-      <span>数据列表</span>
+      <span>商品列表</span>
       <el-button
         class="btn-add"
         @click="handleAddProduct()"

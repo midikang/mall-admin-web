@@ -140,12 +140,30 @@ export const constantRouterMap = [
       }
     ]
   },
+  // add by Midi begin
+  // 练习订单
+  {
+    path: '/myoms',
+    component: Layout,
+    redirect: '/myoms/order',
+    name: 'myoms',
+    meta: {title:'出库订单', icon: 'order'},
+    children:[
+      {
+        path: 'order',
+        name: 'order',
+        component: () => import('@/views/myoms/order/index'),
+        meta: {title: '订单列表', icon: 'product-list'}
+      }
+    ]
+  },
+  // add by Midi End
   {
     path: '/oms',
     component: Layout,
     redirect: '/oms/order',
     name: 'oms',
-    meta: {title: '出库订单', icon: 'order'},
+    meta: {title: '订单', icon: 'order'},
     children: [
       {
         path: 'order',
