@@ -29,7 +29,7 @@ export const constantRouterMap = [
       path: 'home',
       name: 'home',
       component: () => import('@/views/home/index'),
-      meta: {title: '首页', icon: 'home'}
+      meta: {title: '联宇达方WMS后台', icon: 'home'}
     }]
   },
   {
@@ -37,7 +37,7 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/pms/product',
     name: 'pms',
-    meta: {title: '商品', icon: 'product'},
+    meta: {title: '产品', icon: 'product'},
     children: [{
       path: 'product',
       name: 'product',
@@ -145,7 +145,7 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/oms/order',
     name: 'oms',
-    meta: {title: '订单', icon: 'order'},
+    meta: {title: '出库订单', icon: 'order'},
     children: [
       {
         path: 'order',
@@ -199,7 +199,7 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/sms/coupon',
     name: 'sms',
-    meta: {title: '营销', icon: 'sms'},
+    meta: {title: '活动', icon: 'sms'},
     children: [
       {
         path: 'flash',
