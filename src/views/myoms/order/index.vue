@@ -37,5 +37,26 @@
 <script>
 import { fetchList } from "@/api/order";
 
-export default {};
+export default {
+  name: "orderlist",
+  data() {
+    return {
+      listQuery: {
+        pageNum: 1,
+        pageSize: 10
+      },
+      list: null
+    };
+  },
+  created() {
+    this.getList();
+  },
+  methods: {
+    getList() {
+      fetchList(this.listQuery).then(response => {
+        this.list = response.data.list;
+      });
+    }
+  }
+};
 </script>
